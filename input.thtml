@@ -1,20 +1,32 @@
-Title: My Day
+Grid:
+[ One | Two | Three ]
+[ Four | Five | Six ]
+[ Seven | Eight | Nine ]
+
 Table:
+Title: FirstTable
 [Date | Time | Activity ]
 [Sept 1 | 9am | Get to school ]
 [Sept 1 | 11am | Have lunch ]
+One
 
 Table:
-[Date | Lecture | Slides ]
-[Sept 10 | Welcome to 410 | <a href="nowhere.html">this goes nowhere</a>]
-[Sept 15 | Final exam | Q&A slides will be posted]
-
-My Day
+Title: SecondTable
 [Date | Time | Activity ]
 [Sept 1 | 9am | Get to school ]
 [Sept 1 | 11am | Have lunch ]
+Five
 
 Table:
-[Date | Lecture | Slides ]
-[Sept 10 | Welcome to 410 | <a href="nowhere.html">this goes nowhere</a>]
-[Sept 15 | Final exam | Q&A slides will be posted]
+Title: ThirdTable
+[Date | Time | Activity ]
+[Sept 1 | 9am | Get to school ]
+[Sept 1 | 11am | Have lunch ]
+Nine
+
+Table:
+Title: ThirdTable
+[Date | Time | Activity ]
+[Sept 1 | 9am | Get to school ]
+[Sept 1 | 11am | Have lunch ]
+Three

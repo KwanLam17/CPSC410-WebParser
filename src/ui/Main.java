@@ -1,6 +1,7 @@
 package ui;
 
-import ast.PROGRAM;
+import ast.CSS;
+import ast.HTML;
 import libs.Node;
 import libs.Tokenizer;
 
@@ -11,16 +12,21 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws FileNotFoundException, UnsupportedEncodingException {
-       List<String> literals = Arrays.asList("Title:", "Table:","[","]","|","End of table");
-       Tokenizer.makeTokenizer("input.thtml",literals);
-        Node.setWriter("output.html");
-        PROGRAM p = new PROGRAM();
-        System.out.println("Done tokenizing");
-        p.parse();
-        System.out.println("Done parsing");
-        p.evaluate();
-        System.out.println("Done evaluation");
+       List<String> literals = Arrays.asList("Grid:", "Table:", "Title:", "[","]","|");
+        Tokenizer.makeTokenizer("input.thtml",literals);
+        Node.setWriter("output.css");
+        CSS css = new CSS();
+        css.parse();
+        css.evaluate();
         Node.closeWriter();
+
+        Node.setWriter("output.html");
+        HTML p = new HTML();
+        p.parse();
+        p.evaluate();
+        Node.closeWriter();
+
+        System.out.println("Done evaluation");
     }
 
 }
