@@ -28,11 +28,16 @@ public class PROGRAM extends Node {
 //        }
 
         // Parse Tables
-        while(tokenizer.moreTokens()){
-            LIST t = new LIST();
-            t.parse();
+//        while(tokenizer.moreTokens()){
+//            LIST t = new LIST();
+//            t.parse();
 //            tables.add(t);
-        }
+//        }
+
+        tokenizer.checkToken("Content:");
+        CONTENT content = new CONTENT();
+        tokenizer.getAndCheckNext("Content:");
+        content.parse();
     }
 
     @Override

@@ -11,16 +11,20 @@ public class LIST extends Node {
     @Override
     public void parse() {
         tokenizer.getAndCheckNext("List:");
+        tokenizer.getAndCheckNext("[");
 
-//        Must discuss what the literal to use end_list
-        while(!tokenizer.checkToken("end list")){
-//            tokenizer.getAndCheckNext("");
+        LIST_ITEMS firstItem = new LIST_ITEMS();
+        firstItem.parse();
+        listItems.add(firstItem);
+
+        while(!tokenizer.checkToken("\\]")){
+            tokenizer.getAndCheckNext("\\|");
             LIST_ITEMS listItem = new LIST_ITEMS();
             listItem.parse();
             listItems.add(listItem);
         }
 
-        tokenizer.getAndCheckNext("end list");
+        tokenizer.getAndCheckNext("\\]");
     }
 
     @Override
