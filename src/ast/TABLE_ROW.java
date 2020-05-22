@@ -5,7 +5,7 @@ import libs.Node;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ROW extends Node{
+public class TABLE_ROW extends Node{
     List<ITEM> items = new ArrayList<>();
 
     @Override
@@ -30,15 +30,6 @@ public class ROW extends Node{
 
     @Override
     public void evaluate() {
-        writer.println("\t<tr>");
-
-        // Evaluate Items
-        for (ITEM item : items) {
-            writer.print("\t\t<td bgcolor=white>");
-            item.evaluate();
-            writer.println("</td>");
-        }
-
-        writer.println("\t</tr>");
+        // TODO: implement table_row
     }
 }

@@ -6,7 +6,6 @@ public class TITLE extends Node{
     String title;
     @Override
     public void parse() {
-        tokenizer.getAndCheckNext("Title:");
         title=tokenizer.getNext();
     }
 
