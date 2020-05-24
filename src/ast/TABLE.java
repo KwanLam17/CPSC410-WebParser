@@ -12,7 +12,6 @@ public class TABLE extends Node {
 
     @Override
     public void parse() {
-        tokenizer.getAndCheckNext("Table:");
 
         // Parse Title
         title.parse();

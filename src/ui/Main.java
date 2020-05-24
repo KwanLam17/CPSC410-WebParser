@@ -12,7 +12,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws FileNotFoundException, UnsupportedEncodingException {
-       List<String> literals = Arrays.asList("Grid:", "Table:", "Title:", "[","]","|");
+       List<String> literals = Arrays.asList("Grid:", "Title:", "Table:","[","]","|","End of table", "Content:", "Paragraph:", "List:", "Navbar:", "Image:" );
         Tokenizer.makeTokenizer("input.thtml",literals);
         Node.setWriter("output.css");
         CSS css = new CSS();

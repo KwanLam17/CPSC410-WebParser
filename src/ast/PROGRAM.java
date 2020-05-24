@@ -22,30 +22,35 @@ public class PROGRAM extends Node {
 
     public void parse(){
         // Parse Title if it exists
-        title = new TITLE();
-        if (tokenizer.checkToken("Title:")) {
-            title.parse();
-        }
+//        title = new TITLE();
+//        if (tokenizer.checkToken("Title:")) {
+//            title.parse();
+//        }
 
         // Parse Tables
-        while(tokenizer.moreTokens()){
-            TABLE t = new TABLE();
-            t.parse();
-            tables.add(t);
-        }
+//        while(tokenizer.moreTokens()){
+//            LIST t = new LIST();
+//            t.parse();
+//            tables.add(t);
+//        }
+
+        tokenizer.checkToken("Content:");
+        CONTENT content = new CONTENT();
+        tokenizer.getAndCheckNext("Content:");
+        content.parse();
     }
 
     @Override
     public void evaluate() {
         writer.println(start);
 
-        // Evaluate Title
-        title.evaluate();
-
-        // Evaluate Tables
-        for (TABLE t : tables){
-            t.evaluate();
-        }
+//        // Evaluate Title
+//        title.evaluate();
+//
+//        // Evaluate Tables
+//        for (TABLE t : tables){
+//            t.evaluate();
+//        }
 
         writer.println(end);
     }
