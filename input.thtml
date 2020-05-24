@@ -1,6 +1,10 @@
 Content:
 Paragraph:
 This is the text paragraph my friend!
+Navbar:
+project https://github.com/KwanLam17/CPSC410-WebParser
+Image:
+myImage.png
 Table:
 [Date | Time | Activity ]
 [Sept 1 | 9am | Get to school ]

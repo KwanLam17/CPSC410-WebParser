@@ -4,9 +4,9 @@ import libs.Node;
 
 public class CONTENT extends Node {
     TABLE table;
-//    NAVBAR navbar;
+    NAVBAR navbar;
     PARAGRAPH paragraph;
-//    IMAGE image;
+    IMAGE image;
     LIST list;
 
 //    PLACEMENT placement;
@@ -18,20 +18,20 @@ public class CONTENT extends Node {
             tokenizer.getAndCheckNext("Table:");
             table.parse();
 
-//        } else if (tokenizer.checkToken("Navbar:")) {
-//            navbar = new NAVBAR();
-//            tokenizer.getAndCheckNext("Navbar:");
-//            navbar.parse();
+        } else if (tokenizer.checkToken("Navbar:")) {
+            navbar = new NAVBAR();
+            tokenizer.getAndCheckNext("Navbar:");
+            navbar.parse();
 
         } else if (tokenizer.checkToken("Paragraph:")) {
             paragraph = new PARAGRAPH();
             tokenizer.getAndCheckNext("Paragraph:");
             paragraph.parse();
 
-//        } else if (tokenizer.checkToken("Image:")) {
-//            image = new IMAGE();
-//            tokenizer.getAndCheckNext("Image:");
-//            image.parse();
+        } else if (tokenizer.checkToken("Image:")) {
+            image = new IMAGE();
+            tokenizer.getAndCheckNext("Image:");
+            image.parse();
 
         } else if (tokenizer.checkToken("List:")) {
             list = new LIST();
