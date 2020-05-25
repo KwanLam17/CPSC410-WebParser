@@ -20,18 +20,6 @@ public class HTML extends Node {
 
     GRID grid;
 
-    public List<ELEMENT> getElements() {
-        return elements;
-    }
-
-    public String getStart() {
-        return start;
-    }
-
-    public String getEnd() {
-        return end;
-    }
-
     public void parse(){
 
         grid = new GRID();

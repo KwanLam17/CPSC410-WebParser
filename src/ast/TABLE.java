@@ -13,7 +13,8 @@ public class TABLE extends Node {
     public void parse() {
 
         // Parse Title
-        title.parse();
+        if (tokenizer.checkToken("Title:"))
+            title.parse();
 
         // Parse Rows
         while (tokenizer.moreTokens() && tokenizer.checkToken("\\[")) {

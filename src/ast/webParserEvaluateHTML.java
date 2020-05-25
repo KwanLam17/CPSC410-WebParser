@@ -121,6 +121,8 @@ public class webParserEvaluateHTML implements webParserVisitor<Void> {
 
     @Override
     public Void visit(TITLE b) {
+        System.out.println("TITLE");
+        writer.println(b.title);
         return null;
     }
 }
