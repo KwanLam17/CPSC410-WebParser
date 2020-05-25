@@ -5,14 +5,22 @@ Grid:
 
 Placement: One
 Table:
-Title: FirstTable
+Title: SecondTable
 [Date | Time | Activity ]
 [Sept 1 | 9am | Get to school ]
 [Sept 1 | 11am | Have lunch ]
 
+Placement: Three
+Image:
+Image: https://p7.hiclipart.com/preview/403/431/726/5bbc3da3545a3.jpg
+
+Placement: Four
+Navbar:
+Navbar: https://p7.hiclipart.com/preview/403/431/726/5bbc3da3545a3.jpg
+
 Placement: Five
 Table:
-Title: FirstTable
+Title: ThirdTable
 [Date | Time | Activity ]
 [Sept 1 | 9am | Get to school ]
 [Sept 1 | 11am | Have lunch ]

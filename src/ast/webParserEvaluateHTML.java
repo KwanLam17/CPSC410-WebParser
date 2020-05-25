@@ -71,6 +71,16 @@ public class webParserEvaluateHTML implements webParserVisitor<Void> {
 
     @Override
     public Void visit(IMAGE b) {
+        System.out.println("IMAGE");
+        writer.println("<div id=\"" + b.hashCode() + "\">");
+
+        printIndentedLine("<img src=\"", 1);
+        printIndentedLine(b.imageSrc, 2);
+        printIndentedLine("\"", 1);
+        printIndentedLine("width=\"200\"\n" +
+                "       height=\"141\">", 1);
+        writer.println("</div>");
+
         return null;
     }
 
@@ -89,6 +99,14 @@ public class webParserEvaluateHTML implements webParserVisitor<Void> {
 
     @Override
     public Void visit(NAVBAR b) {
+        System.out.println("NAVBAR");
+        writer.println("<div id=\"" + b.hashCode() + "\">");
+
+        printIndentedLine("<nav>", 1);
+        //printIndentedLine(b.imageSrc, 2);
+        printIndentedLine("<a href=\"https://github.com/KwanLam17/CPSC410-WebParser\">Navbar</a>", 1);
+        printIndentedLine("</nav>", 1);
+        writer.println("</div>");
         return null;
     }
 

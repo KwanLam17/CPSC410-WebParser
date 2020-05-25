@@ -4,12 +4,12 @@ import libs.Node;
 
 public class IMAGE extends Node {
 
-    String image;
+    String imageSrc;
 
     @Override
     public void parse() {
         tokenizer.getAndCheckNext("Image:");
-        image = tokenizer.getNext();
+        imageSrc = tokenizer.getNext();
         //TODO: resize()
 
     }
