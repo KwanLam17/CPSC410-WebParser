@@ -13,9 +13,15 @@ public class IMAGE extends Node {
         //TODO: resize()
 
     }
+//
+//    @Override
+//    public void evaluate() {
+//        writer.print(image);
+//    }
 
-    @Override
-    public void evaluate() {
-        writer.print(image);
+    //@Override
+    public <T> T accept(webParserVisitor<T> v) {
+        return v.visit(this);
     }
+
 }

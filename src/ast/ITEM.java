@@ -9,9 +9,15 @@ public class ITEM extends Node {
     public void parse() {
         itemName = tokenizer.getNext();
     }
+//
+//    @Override
+//    public void evaluate() {
+//        writer.print(itemName);
+//    }
 
-    @Override
-    public void evaluate() {
-        writer.print(itemName);
+    //@Override
+    public <T> T accept(webParserVisitor<T> v) {
+        return v.visit(this);
     }
+
 }

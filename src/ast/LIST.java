@@ -27,8 +27,14 @@ public class LIST extends Node {
         tokenizer.getAndCheckNext("\\]");
     }
 
-    @Override
-    public void evaluate() {
+//    @Override
+//    public void evaluate() {
+//
+//    }
 
+    //@Override
+    public <T> T accept(webParserVisitor<T> v) {
+        return v.visit(this);
     }
+
 }

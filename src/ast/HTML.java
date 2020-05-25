@@ -7,7 +7,7 @@ import java.util.List;
 
 
 public class HTML extends Node {
-    List<TABLE> tables = new ArrayList<>();
+    List<ELEMENT> elements = new ArrayList<>();
     String start = "<!DOCTYPE html>\n" +
             "<html>\n" +
             "<head>\n" +
@@ -18,23 +18,47 @@ public class HTML extends Node {
             "</html>\n" +
             "\n";
 
+    GRID grid;
+
+    public List<ELEMENT> getElements() {
+        return elements;
+    }
+
+    public String getStart() {
+        return start;
+    }
+
+    public String getEnd() {
+        return end;
+    }
+
     public void parse(){
+
+        grid = new GRID();
+        grid.parse();
+
         // Parse Tables
         while(tokenizer.moreTokens()){
-            TABLE t = new TABLE();
-            t.parse();
-            tables.add(t);
+            ELEMENT element = new ELEMENT();
+            element.parse();
+            elements.add(element);
         }
     }
 
-    @Override
-    public void evaluate() {
-        writer.println(start);
+//    @Override
+//    public void evaluate() {
+//        writer.println(start);
+//
+//        for (CONTENT content : contents) {
+//            content.evaluate();
+//        }
+//
+//        writer.println(end);
+//    }
 
-        for (TABLE table : tables) {
-            table.evaluate();
-        }
-
-        writer.println(end);
+    //@Override
+    public <T> T accept(webParserVisitor<T> v) {
+        return v.visit(this);
     }
+
 }

@@ -1,6 +1,8 @@
 package libs;
 
 
+import ast.webParserVisitor;
+
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
@@ -16,7 +18,7 @@ public abstract class Node {
     }
 
     abstract public void parse();
-    abstract public void evaluate();
-
+//    abstract public void evaluate();
+    abstract public <T> T accept(webParserVisitor<T> v);
 
 }

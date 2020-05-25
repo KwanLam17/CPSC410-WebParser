@@ -3,30 +3,23 @@ Grid:
 [ Four | Five | Six ]
 [ Seven | Eight | Nine ]
 
+Placement: One
 Table:
 Title: FirstTable
 [Date | Time | Activity ]
 [Sept 1 | 9am | Get to school ]
 [Sept 1 | 11am | Have lunch ]
-One
 
+Placement: Five
 Table:
-Title: SecondTable
+Title: FirstTable
 [Date | Time | Activity ]
 [Sept 1 | 9am | Get to school ]
 [Sept 1 | 11am | Have lunch ]
-Five
 
+Placement: Nine
 Table:
-Title: ThirdTable
+Title: FirstTable
 [Date | Time | Activity ]
 [Sept 1 | 9am | Get to school ]
 [Sept 1 | 11am | Have lunch ]
-Nine
-
-Table:
-Title: ThirdTable
-[Date | Time | Activity ]
-[Sept 1 | 9am | Get to school ]
-[Sept 1 | 11am | Have lunch ]
-Three

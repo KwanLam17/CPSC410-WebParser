@@ -51,6 +51,7 @@ public class Tokenizer {
     private void tokenize (){
         String tokenizedProgram = program;
         tokenizedProgram = tokenizedProgram.replace("\n","");
+        tokenizedProgram = tokenizedProgram.replace("\r","");
         System.out.println("First:" + program);
 
         for (String s : literals){

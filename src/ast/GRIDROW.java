@@ -26,14 +26,20 @@ public class GRIDROW extends Node{
         tokenizer.getAndCheckNext("\\]");
     }
 
-    @Override
-    public void evaluate() {
-        writer.print("\"");
+//    @Override
+//    public void evaluate() {
+//        writer.print("\"");
+//
+//        for (String placement : placements) {
+//            writer.print(placement + " ");
+//        }
+//
+//        writer.print("\"\n");
+//    }
 
-        for (String placement : placements) {
-            writer.print(placement + " ");
-        }
 
-        writer.print("\"\n");
+    //@Override
+    public <T> T accept(webParserVisitor<T> v) {
+        return v.visit(this);
     }
 }

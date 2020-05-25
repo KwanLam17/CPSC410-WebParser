@@ -5,7 +5,7 @@ import libs.Node;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TABLE_ROW extends Node{
+public class ROW extends Node{
     List<ITEM> items = new ArrayList<>();
 
     @Override
@@ -28,8 +28,24 @@ public class TABLE_ROW extends Node{
         tokenizer.getAndCheckNext("\\]");
     }
 
-    @Override
-    public void evaluate() {
-        // TODO: implement table_row
+//    @Override
+//    public void evaluate() {
+//        writer.println("\t<tr>");
+//
+//        // Evaluate Items
+//        for (ITEM item : items) {
+//            writer.print("\t\t<td bgcolor=white>");
+//            item.evaluate();
+//            writer.println("</td>");
+//        }
+//
+//        writer.println("\t</tr>");
+//    }
+
+
+    //@Override
+    public <T> T accept(webParserVisitor<T> v) {
+        return v.visit(this);
     }
+
 }

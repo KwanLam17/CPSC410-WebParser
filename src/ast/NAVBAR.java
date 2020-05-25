@@ -14,8 +14,14 @@ public class NAVBAR extends Node {
 
     }
 
-    @Override
-    public void evaluate() {
-        writer.print(navbar);
+//    @Override
+//    public void evaluate() {
+//        writer.print(navbar);
+//    }
+
+    //@Override
+    public <T> T accept(webParserVisitor<T> v) {
+        return v.visit(this);
     }
+
 }
