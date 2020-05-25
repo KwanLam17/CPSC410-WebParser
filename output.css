@@ -1,0 +1,16 @@
+body {
+    display: grid;
+    grid-template-areas:
+"One Two Three "
+"Four Five Six "
+"Seven Eight Nine "
+;}
+.class362239120 {
+grid-area: One;
+}
+.class905654280 {
+grid-area: Five;
+}
+.class1915058446 {
+grid-area: Nine;
+}

@@ -18,21 +18,58 @@ public class webParserEvaluateCSS implements webParserVisitor<Void> {
 
     @Override
     public Void visit(ELEMENT b) {
+        writer.print(b.cssStart);
+
+        switch(b.element) {
+            case "Table":
+                writer.print(b.table.hashCode());
+                break;
+            case "Navbar":
+                break;
+            case "Paragraph":
+                break;
+            case "Image":
+                break;
+            case "List":
+                break;
+        }
+
+        writer.println(b.cssMiddle + b.placement + b.cssEnd);
         return null;
     }
 
     @Override
     public Void visit(GRID b) {
+        System.out.println("GRID");
+        writer.println(b.cssStart);
+
+        for (GRIDROW gridrow : b.gridRows) {
+            gridrow.accept(this);
+        }
+
+        writer.println(b.cssEnd);
         return null;
     }
 
     @Override
     public Void visit(GRIDROW b) {
+        writer.print("\"");
+
+        for (String placement : b.placements) {
+            writer.print(placement + " ");
+        }
+
+        writer.print("\"\n");
         return null;
     }
 
     @Override
     public Void visit(HTML b) {
+        b.grid.accept(this);
+
+        for (ELEMENT element : b.elements) {
+            element.accept(this);
+        }
         return null;
     }
 
@@ -67,9 +104,7 @@ public class webParserEvaluateCSS implements webParserVisitor<Void> {
     }
 
     @Override
-    public Void visit(TABLE b) {
-        return null;
-    }
+    public Void visit(TABLE b) { return null; }
 
     @Override
     public Void visit(TITLE b) {

@@ -20,14 +20,14 @@ Navbar: Our Project https://github.com/KwanLam17/CPSC410-WebParser
 
 Placement: Five
 Table:
-Title: ThirdTable
+Title: FirstTable
 [Date | Time | Activity ]
 [Sept 1 | 9am | Get to school ]
 [Sept 1 | 11am | Have lunch ]
 
 Placement: Nine
 Table:
-Title: FirstTable
+Title: ThirdTable
 [Date | Time | Activity ]
 [Sept 1 | 9am | Get to school ]
 [Sept 1 | 11am | Have lunch ]
