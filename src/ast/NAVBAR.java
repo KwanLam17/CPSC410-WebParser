@@ -4,14 +4,15 @@ import libs.Node;
 
 public class NAVBAR extends Node {
 
-    String navbar;
+    String name;
+    String link;
 
     @Override
     public void parse() {
         tokenizer.getAndCheckNext("Navbar:");
-        navbar = tokenizer.getNext();
-        //TODO: split into text and href
-
+        name = tokenizer.getNext();
+        link = name.substring(name.lastIndexOf("http"));  // TODO: treat name and link as two contents like table?
+        name = name.replace(link,"");
     }
 
     //@Override

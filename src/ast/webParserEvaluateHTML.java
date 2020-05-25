@@ -103,8 +103,11 @@ public class webParserEvaluateHTML implements webParserVisitor<Void> {
         writer.println("<div id=\"" + b.hashCode() + "\">");
 
         printIndentedLine("<nav>", 1);
-        //printIndentedLine(b.imageSrc, 2);
-        printIndentedLine("<a href=\"https://github.com/KwanLam17/CPSC410-WebParser\">Navbar</a>", 1);
+        printIndentedLine("<a href=\"", 1);
+        printIndentedLine(b.link, 2);
+        printIndentedLine("\">", 1);
+        printIndentedLine(b.name, 2);
+        printIndentedLine("</a>", 1);
         printIndentedLine("</nav>", 1);
         writer.println("</div>");
         return null;
