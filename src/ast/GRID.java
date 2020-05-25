@@ -6,10 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GRID extends Node {
-    String start = "body {\n" +
+    String cssStart = "body {\n" +
             "    display: grid;\n" +
             "    grid-template-areas:";
-    String end = "}";
+    String cssEnd = ";}";
 
     List<GRIDROW> gridRows = new ArrayList<>();
 

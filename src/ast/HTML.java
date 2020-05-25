@@ -7,6 +7,7 @@ import java.util.List;
 
 
 public class HTML extends Node {
+    GRID grid;
     List<ELEMENT> elements = new ArrayList<>();
     String start = "<!DOCTYPE html>\n" +
             "<html>\n" +
@@ -17,8 +18,6 @@ public class HTML extends Node {
     String end = "</body>\n" +
             "</html>\n" +
             "\n";
-
-    GRID grid;
 
     public void parse(){
 

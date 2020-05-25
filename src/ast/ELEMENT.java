@@ -12,6 +12,11 @@ public class ELEMENT extends Node {
     String element;
     String placement;
 
+    String cssStart = ".class";
+    String cssMiddle = " {\n" +
+            "grid-area: ";
+    String cssEnd = ";\n}";
+
     @Override
     public void parse() {
 

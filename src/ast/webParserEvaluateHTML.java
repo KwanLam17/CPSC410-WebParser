@@ -47,14 +47,10 @@ public class webParserEvaluateHTML implements webParserVisitor<Void> {
     }
 
     @Override
-    public Void visit(GRID b) {
-        return null;
-    }
+    public Void visit(GRID b) { return null; }
 
     @Override
-    public Void visit(GRIDROW b) {
-        return null;
-    }
+    public Void visit(GRIDROW b) { return null; }
 
     @Override
     public Void visit(HTML b) {
@@ -117,7 +113,7 @@ public class webParserEvaluateHTML implements webParserVisitor<Void> {
     @Override
     public Void visit(TABLE b) {
         System.out.println("TABLE");
-        writer.println("<div id=\"" + b.hashCode() + "\">");
+        writer.println("<div class=\"class" + b.hashCode() + "\">");
 
         if (b.title != null) {
             b.title.accept(this);

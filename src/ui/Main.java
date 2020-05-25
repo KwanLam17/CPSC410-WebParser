@@ -4,7 +4,6 @@ package ui;
 import ast.HTML;
 import ast.webParserEvaluateCSS;
 import ast.webParserEvaluateHTML;
-import libs.Node;
 import libs.Tokenizer;
 
 import java.io.FileNotFoundException;
