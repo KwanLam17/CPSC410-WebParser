@@ -68,7 +68,7 @@ public class webParserEvaluateHTML implements webParserVisitor<Void> {
     @Override
     public Void visit(IMAGE b) {
         System.out.println("IMAGE");
-        writer.println("<div id=\"" + b.hashCode() + "\">");
+        writer.println("<div class=\"class" + b.hashCode() + "\">");
 
         printIndentedLine("<img src=\"", 1);
         printIndentedLine(b.imageSrc, 2);
@@ -96,7 +96,7 @@ public class webParserEvaluateHTML implements webParserVisitor<Void> {
     @Override
     public Void visit(NAVBAR b) {
         System.out.println("NAVBAR");
-        writer.println("<div id=\"" + b.hashCode() + "\">");
+        writer.println("<div class=\"class" + b.hashCode() + "\">");
 
         printIndentedLine("<nav>", 1);
         printIndentedLine("<a href=\"", 1);

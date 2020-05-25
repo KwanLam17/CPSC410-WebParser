@@ -25,10 +25,12 @@ public class webParserEvaluateCSS implements webParserVisitor<Void> {
                 writer.print(b.table.hashCode());
                 break;
             case "Navbar":
+                writer.print(b.navbar.hashCode());
                 break;
             case "Paragraph":
                 break;
             case "Image":
+                writer.print(b.image.hashCode());
                 break;
             case "List":
                 break;
