@@ -105,6 +105,10 @@ public class webParserEvaluateHTML implements webParserVisitor<Void> {
 
     @Override
     public Void visit(PARAGRAPH b) {
+        writer.println(b.start);
+        printIndentedLine(b.paragraph, 4);
+        writer.println(b.end);
+
         return null;
     }
 
