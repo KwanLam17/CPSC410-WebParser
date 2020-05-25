@@ -110,6 +110,9 @@ public class webParserEvaluateHTML implements webParserVisitor<Void> {
     @Override
     public Void visit(TABLE b) {
         System.out.println("TABLE");
+        if (b.title != null) {
+            b.title.accept(this);
+        }
 //        writer.println("<table bgcolor=black " + "style=\"grid-area: " + placement + "\" >");
         writer.println("<table bgcolor=black " + "id=\"" + b.hashCode() + "\" >");
         for (ROW r : b.rows){

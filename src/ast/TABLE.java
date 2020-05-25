@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TABLE extends Node {
-    TITLE title = new TITLE();
+    TITLE title;
     List<ROW> rows = new ArrayList<>();
 
     @Override
@@ -14,6 +14,7 @@ public class TABLE extends Node {
 
         // Parse Title
         if (tokenizer.checkToken("Title:"))
+            title = new TITLE();
             title.parse();
 
         // Parse Rows
