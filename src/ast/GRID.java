@@ -24,19 +24,6 @@ public class GRID extends Node {
         }
     }
 
-//    @Override
-//    public void evaluate() {
-//        writer.println(start);
-//
-//        for (GRIDROW r : gridRows){
-//            r.evaluate();
-//        }
-//
-//        writer.println(";");
-//
-//        writer.println(end);
-//    }
-
     //@Override
     public <T> T accept(webParserVisitor<T> v) {
         return v.visit(this);

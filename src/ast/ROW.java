@@ -28,21 +28,6 @@ public class ROW extends Node{
         tokenizer.getAndCheckNext("\\]");
     }
 
-//    @Override
-//    public void evaluate() {
-//        writer.println("\t<tr>");
-//
-//        // Evaluate Items
-//        for (ITEM item : items) {
-//            writer.print("\t\t<td bgcolor=white>");
-//            item.evaluate();
-//            writer.println("</td>");
-//        }
-//
-//        writer.println("\t</tr>");
-//    }
-
-
     //@Override
     public <T> T accept(webParserVisitor<T> v) {
         return v.visit(this);

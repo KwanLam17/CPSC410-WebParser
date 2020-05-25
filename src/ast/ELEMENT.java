@@ -52,16 +52,6 @@ public class ELEMENT extends Node {
 
     }
 
-//    @Override
-//    public void evaluate() {
-//
-//        // TODO: implement evaluate
-//        /*#{content-id} {
-//            grid-placement: {placement}
-//        }*/
-//
-//
-//    }
 
     //@Override
     public <T> T accept(webParserVisitor<T> v) {

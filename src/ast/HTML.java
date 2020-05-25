@@ -33,16 +33,6 @@ public class HTML extends Node {
         }
     }
 
-//    @Override
-//    public void evaluate() {
-//        writer.println(start);
-//
-//        for (CONTENT content : contents) {
-//            content.evaluate();
-//        }
-//
-//        writer.println(end);
-//    }
 
     //@Override
     public <T> T accept(webParserVisitor<T> v) {

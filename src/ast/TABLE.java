@@ -25,15 +25,6 @@ public class TABLE extends Node {
         }
     }
 
-//    @Override
-//    public void evaluate() {
-////        writer.println("<table bgcolor=black " + "style=\"grid-area: " + placement + "\" >");
-//        writer.println("<table bgcolor=black " + "id=\"" + this.hashCode() + "\" >");
-//        for (ROW r : rows){
-//            r.evaluate();
-//        }
-//        writer.println("</table>");
-//    }
     //@Override
     public <T> T accept(webParserVisitor<T> v) {
         return v.visit(this);

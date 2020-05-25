@@ -14,11 +14,6 @@ public class PARAGRAPH extends Node {
 
     }
 
-//    @Override
-//    public void evaluate() {
-//        writer.print(paragraph);
-//    }
-
     //@Override
     public <T> T accept(webParserVisitor<T> v) {
         return v.visit(this);
