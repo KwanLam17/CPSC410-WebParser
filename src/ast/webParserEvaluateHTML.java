@@ -81,11 +81,6 @@ public class webParserEvaluateHTML implements webParserVisitor<Void> {
     }
 
     @Override
-    public Void visit(LIST_ITEMS b) {
-        return null;
-    }
-
-    @Override
     public Void visit(NAVBAR b) {
         return null;
     }

@@ -24,9 +24,9 @@ public class Main {
         html.accept(h);
         h.closeFile();
 
-//        webParserEvaluateCSS c = new webParserEvaluateCSS("output.css");
-//        html.accept(c);
-//        c.closeFile();
+        webParserEvaluateCSS c = new webParserEvaluateCSS("output.css");
+        html.accept(c);
+        c.closeFile();
 
 //        Node.setWriter("output.css");
 //        CSS css = new CSS();

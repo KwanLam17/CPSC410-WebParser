@@ -8,7 +8,6 @@ public interface webParserVisitor<T> {
     T visit(IMAGE b);
     T visit(LIST b);
     T visit(ITEM b);
-    T visit(LIST_ITEMS b);
     T visit(NAVBAR b);
     T visit(PARAGRAPH b);
     T visit(ROW b);

@@ -3,25 +3,26 @@ package ast;
 import libs.Node;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class LIST extends Node {
 
-    java.util.List<LIST_ITEMS> listItems = new ArrayList<>();
+    List<ITEM> listItems = new ArrayList<>();
 
     @Override
     public void parse() {
         tokenizer.getAndCheckNext("List:");
         tokenizer.getAndCheckNext("[");
 
-        LIST_ITEMS firstItem = new LIST_ITEMS();
+        ITEM firstItem = new ITEM();
         firstItem.parse();
         listItems.add(firstItem);
 
         while(!tokenizer.checkToken("\\]")){
             tokenizer.getAndCheckNext("\\|");
-            LIST_ITEMS listItem = new LIST_ITEMS();
-            listItem.parse();
-            listItems.add(listItem);
+            ITEM item = new ITEM();
+            item.parse();
+            listItems.add(item);
         }
 
         tokenizer.getAndCheckNext("\\]");
