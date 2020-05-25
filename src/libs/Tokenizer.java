@@ -42,7 +42,7 @@ public class Tokenizer {
         String [] temparray=tokenizedProgram.split("_");
         tokens = new String[temparray.length-1];
         System.arraycopy(temparray,1,tokens,0,temparray.length-1);
-        System.out.println(Arrays.asList(tokens));
+//        System.out.println(Arrays.asList(tokens));
     }
 
     //modifies: this.tokens
@@ -52,21 +52,21 @@ public class Tokenizer {
         String tokenizedProgram = program;
         tokenizedProgram = tokenizedProgram.replace("\n","");
         tokenizedProgram = tokenizedProgram.replace("\r","");
-        System.out.println("First:" + program);
+//        System.out.println("First:" + program);
 
         for (String s : literals){
 //            tokenizedProgram = tokenizedProgram.replaceAll(s,"_"+s+"_"); // if you change literals to be regexps
             tokenizedProgram = tokenizedProgram.replace(s,"_"+s+"_");
-            System.out.println(tokenizedProgram);
+//            System.out.println(tokenizedProgram);
         }
         tokenizedProgram = tokenizedProgram.replaceAll("__","_");
         tokenizedProgram = tokenizedProgram.replaceAll(" ","");
-        System.out.println(tokenizedProgram);
+//        System.out.println(tokenizedProgram);
         String [] temparray=tokenizedProgram.split("_");
         tokens = new String[temparray.length-1];
 
         System.arraycopy(temparray,1,tokens,0,temparray.length-1);
-        System.out.println(Arrays.asList(tokens));
+//        System.out.println(Arrays.asList(tokens));
     }
 
     private String checkNext(){
@@ -93,7 +93,7 @@ public class Tokenizer {
 
     public boolean checkToken(String regexp){
         String s = checkNext();
-        System.out.println("comparing: |"+s+"|  to  |"+regexp+"|");
+//        System.out.println("comparing: |"+s+"|  to  |"+regexp+"|");
         return (s.matches(regexp));
     }
 
@@ -103,7 +103,7 @@ public class Tokenizer {
         if (!s.matches(regexp)) {
             throw new RuntimeException("Unexpected next token for Parsing! Expected something matching: " + regexp + " but got: " + s);
         }
-        System.out.println("matched: "+s+"  to  "+regexp);
+//        System.out.println("matched: "+s+"  to  "+regexp);
         return s;
     }
 
