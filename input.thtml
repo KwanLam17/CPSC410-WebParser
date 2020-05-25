@@ -3,6 +3,14 @@ Grid:
 [ Four | Five | Six ]
 [ Seven | Eight | Nine ]
 
+Placement: Two
+List:
+[First LI | Second LI | Third LI]
+
+Placement: Three
+List:
+[First LI | Second LI]
+
 Placement: One
 Table:
 Title: FirstTable

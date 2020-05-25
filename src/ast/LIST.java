@@ -8,11 +8,13 @@ import java.util.List;
 public class LIST extends Node {
 
     List<ITEM> listItems = new ArrayList<>();
+    String start = "<ul>";
+    String end = "</ul>";
 
     @Override
     public void parse() {
-        tokenizer.getAndCheckNext("List:");
-        tokenizer.getAndCheckNext("[");
+//        tokenizer.getAndCheckNext("List:");
+        tokenizer.getAndCheckNext("\\[");
 
         ITEM firstItem = new ITEM();
         firstItem.parse();
