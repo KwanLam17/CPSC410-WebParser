@@ -9,7 +9,8 @@ public class NAVBAR extends Node {
 
     @Override
     public void parse() {
-        tokenizer.getAndCheckNext("Navbar:");
+        // tokenizer.getAndCheckNext("Name:");
+        // tokenizer.getAndCheckNext("Link:");
         name = tokenizer.getNext();
         link = name.substring(name.lastIndexOf("http"));  // TODO: treat name and link as two contents like table?
         name = name.replace(link,"");
