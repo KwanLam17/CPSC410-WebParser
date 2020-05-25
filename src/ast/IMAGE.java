@@ -8,7 +8,6 @@ public class IMAGE extends Node {
 
     @Override
     public void parse() {
-        // tokenizer.getAndCheckNext("Image:");
         imageSrc = tokenizer.getNext();
         //TODO: resize()
 

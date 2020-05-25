@@ -12,7 +12,7 @@ public class NAVBAR extends Node {
         // tokenizer.getAndCheckNext("Name:");
         // tokenizer.getAndCheckNext("Link:");
         name = tokenizer.getNext();
-        link = name.substring(name.lastIndexOf("http"));  // TODO: treat name and link as two contents like table?
+        link = name.substring(name.lastIndexOf("http"));  // TODO: treat name and link as two tokens?
         name = name.replace(link,"");
     }
 
