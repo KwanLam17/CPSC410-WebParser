@@ -82,6 +82,17 @@ public class webParserEvaluateHTML implements webParserVisitor<Void> {
 
     @Override
     public Void visit(LIST b) {
+
+        writer.println(b.start);
+
+        for (ITEM item : b.listItems) {
+            printIndentedLine("<li>", 3);
+            item.accept(this);
+            printIndentedLine("</li>", 3);
+        }
+
+        writer.println(b.end);
+
         return null;
     }
 
@@ -111,6 +122,10 @@ public class webParserEvaluateHTML implements webParserVisitor<Void> {
 
     @Override
     public Void visit(PARAGRAPH b) {
+        writer.println(b.start);
+        printIndentedLine(b.paragraph, 4);
+        writer.println(b.end);
+
         return null;
     }
 
