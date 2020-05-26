@@ -24,6 +24,19 @@ public class webParserEvaluateHTML implements webParserVisitor<Void> {
     }
 
     @Override
+    public Void visit(HTML b) {
+        System.out.println("HTML");
+        writer.println(b.start);
+
+        for (ELEMENT element : b.elements) {
+            element.accept(this);
+        }
+
+        writer.println(b.end);
+        return null;
+    }
+
+    @Override
     public Void visit(ELEMENT b) {
         System.out.println("ELEMENT");
         switch(b.element) {
@@ -51,19 +64,6 @@ public class webParserEvaluateHTML implements webParserVisitor<Void> {
 
     @Override
     public Void visit(GRIDROW b) { return null; }
-
-    @Override
-    public Void visit(HTML b) {
-        System.out.println("HTML");
-        writer.println(b.start);
-
-        for (ELEMENT element : b.elements) {
-            element.accept(this);
-        }
-
-        writer.println(b.end);
-        return null;
-    }
 
     @Override
     public Void visit(IMAGE b) {

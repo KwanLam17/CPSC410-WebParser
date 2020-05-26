@@ -27,18 +27,6 @@ public class Main {
         html.accept(c);
         c.closeFile();
 
-//        Node.setWriter("output.css");
-//        CSS css = new CSS();
-//        css.parse();
-//        css.evaluate();
-//        Node.closeWriter();
-//
-//        Node.setWriter("output.html");
-//        HTML p = new HTML();
-//        p.parse();
-//        p.evaluate();
-//        Node.closeWriter();
-
         System.out.println("Done evaluation");
     }
 

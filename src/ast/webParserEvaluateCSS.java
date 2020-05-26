@@ -17,12 +17,23 @@ public class webParserEvaluateCSS implements webParserVisitor<Void> {
     }
 
     @Override
+    public Void visit(HTML b) {
+        b.grid.accept(this);
+
+        for (ELEMENT element : b.elements) {
+            element.accept(this);
+        }
+        return null;
+    }
+
+    @Override
     public Void visit(ELEMENT b) {
         writer.print(b.cssStart);
 
         switch(b.element) {
             case "Table":
                 writer.print(b.table.hashCode());
+                b.table.accept(this);
                 break;
             case "Navbar":
                 writer.print(b.navbar.hashCode());
@@ -68,16 +79,6 @@ public class webParserEvaluateCSS implements webParserVisitor<Void> {
     }
 
     @Override
-    public Void visit(HTML b) {
-        b.grid.accept(this);
-
-        for (ELEMENT element : b.elements) {
-            element.accept(this);
-        }
-        return null;
-    }
-
-    @Override
     public Void visit(IMAGE b) {
         return null;
     }
@@ -116,14 +117,24 @@ public class webParserEvaluateCSS implements webParserVisitor<Void> {
 
     @Override
     public Void visit(ROW b) {
+        // styles for individual row
         return null;
     }
 
     @Override
-    public Void visit(TABLE b) { return null; }
+    public Void visit(TABLE b) {
+        b.title.accept(this);
+        for (ROW row: b.rows) {
+            // probably best to style all rows for specific table (here)
+            row.accept(this);
+        }
+        return null;
+    }
 
     @Override
     public Void visit(TITLE b) {
+        // styles for title
+        writer.println("font-weight: normal;");
         return null;
     }
 }
