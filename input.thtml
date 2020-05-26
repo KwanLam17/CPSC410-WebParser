@@ -7,15 +7,14 @@ Placement: Four
 List:
 [First LI | Second LI | Third LI]
 
-Placement: Two
-Paragraph: Hello my friend this is the best paragraph in the world!!
+
 
 
 Placement: Three
 List:
 [First LI | Second LI]
 
-Placement: One
+Placement: Eight
 Table:
 Title: SecondTable
 [Date | Time | Activity ]
@@ -26,9 +25,9 @@ Placement: Six
 Image:
 https://p7.hiclipart.com/preview/403/431/726/5bbc3da3545a3.jpg
 
-Placement: Seven
+Placement: One
 Navbar:
-Project https://github.com/KwanLam17/CPSC410-WebParser
+[Our Project,https://github.com/KwanLam17/CPSC410-WebParser|Course Page,https://canvas.ubc.ca/]
 
 Placement: Five
 Table:
@@ -43,3 +42,6 @@ Title: ThirdTable
 [Date | Time | Activity ]
 [Sept 1 | 9am | Get to school ]
 [Sept 1 | 11am | Have lunch ]
+
+Placement: Seven
+Paragraph: Hello my friend this is the best paragraph in the world!!

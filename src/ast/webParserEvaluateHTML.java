@@ -3,6 +3,7 @@ package ast;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
+import java.util.Map;
 
 public class webParserEvaluateHTML implements webParserVisitor<Void> {
     private PrintWriter writer; // nothing stops a visitor from having other features
@@ -114,11 +115,16 @@ public class webParserEvaluateHTML implements webParserVisitor<Void> {
         writer.println("<div class=\"class" + b.hashCode() + "\">");
 
         printIndentedLine("<nav>", 1);
-        printIndentedLine("<a href=\"", 1);
-        printIndentedLine(b.link, 2);
-        printIndentedLine("\">", 1);
-        printIndentedLine(b.name, 2);
-        printIndentedLine("</a>", 1);
+
+        for (Map.Entry<ITEM, ITEM> entry : b.navLinks.entrySet()) {
+            System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
+            printIndentedLine("<a href=\"", 1);
+            entry.getValue().accept(this);
+            printIndentedLine("\">", 1);
+            entry.getKey().accept(this);
+            printIndentedLine("</a> |", 1);
+        }
+
         printIndentedLine("</nav>", 1);
         writer.println("</div>");
         return null;

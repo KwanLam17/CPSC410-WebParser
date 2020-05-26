@@ -103,6 +103,7 @@ public class webParserEvaluateCSS implements webParserVisitor<Void> {
 
     @Override
     public Void visit(NAVBAR b) {
+        b.accept(this);
         return null;
     }
 

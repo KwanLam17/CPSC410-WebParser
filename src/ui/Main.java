@@ -13,7 +13,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws FileNotFoundException, UnsupportedEncodingException {
-       List<String> literals = Arrays.asList("Grid:", "Title:", "Table:","[","]","|","End of table", "Content:", "Paragraph:", "List:", "Navbar:", "Image:", "Placement:");
+       List<String> literals = Arrays.asList("Grid:", "Title:", "Table:","[","]","|","End of table", "Content:", "Paragraph:", "List:", "Navbar:", "Image:", "Placement:",",");
         Tokenizer.makeTokenizer("input.thtml",literals);
 
         HTML html = new HTML();
