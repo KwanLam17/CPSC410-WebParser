@@ -83,6 +83,8 @@ public class webParserEvaluateHTML implements webParserVisitor<Void> {
     @Override
     public Void visit(LIST b) {
 
+        writer.println("<div class=\"class" + b.hashCode() + "\">");
+
         writer.println(b.start);
 
         for (ITEM item : b.listItems) {
@@ -92,6 +94,8 @@ public class webParserEvaluateHTML implements webParserVisitor<Void> {
         }
 
         writer.println(b.end);
+
+        writer.println("</div>");
 
         return null;
     }
@@ -122,9 +126,15 @@ public class webParserEvaluateHTML implements webParserVisitor<Void> {
 
     @Override
     public Void visit(PARAGRAPH b) {
+
+        writer.println("<div class=\"class" + b.hashCode() + "\">");
+
         writer.println(b.start);
+
         printIndentedLine(b.paragraph, 4);
         writer.println(b.end);
+
+        writer.println("</div>");
 
         return null;
     }

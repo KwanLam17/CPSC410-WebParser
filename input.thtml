@@ -3,12 +3,12 @@ Grid:
 [ Four | Five | Six ]
 [ Seven | Eight | Nine ]
 
-Placement: Two
+Placement: Four
 List:
 [First LI | Second LI | Third LI]
 
-Placement: Seven
-Paragraph: Hello my friend
+Placement: Two
+Paragraph: Hello my friend this is the best paragraph in the world!!
 
 
 Placement: Three

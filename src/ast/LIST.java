@@ -10,6 +10,10 @@ public class LIST extends Node {
     List<ITEM> listItems = new ArrayList<>();
     String start = "<ul>";
     String end = "</ul>";
+    String cssStart = ".class";
+    String cssMiddle = " {\n" +
+            "grid-area: ";
+    String cssEnd = ";\n}";
 
     @Override
     public void parse() {

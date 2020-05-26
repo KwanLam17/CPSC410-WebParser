@@ -28,11 +28,13 @@ public class webParserEvaluateCSS implements webParserVisitor<Void> {
                 writer.print(b.navbar.hashCode());
                 break;
             case "Paragraph":
+                writer.print(b.paragraph.hashCode());
                 break;
             case "Image":
                 writer.print(b.image.hashCode());
                 break;
             case "List":
+                writer.print(b.list.hashCode());
                 break;
         }
 
@@ -82,6 +84,14 @@ public class webParserEvaluateCSS implements webParserVisitor<Void> {
 
     @Override
     public Void visit(LIST b) {
+        writer.println(b.cssStart);
+
+        for (ITEM item : b.listItems) {
+            item.accept(this);
+        }
+
+        writer.println(b.cssEnd);
+
         return null;
     }
 
@@ -97,6 +107,10 @@ public class webParserEvaluateCSS implements webParserVisitor<Void> {
 
     @Override
     public Void visit(PARAGRAPH b) {
+        writer.println(b.cssStart);
+
+        writer.println(b.cssEnd);
+
         return null;
     }
 

@@ -7,6 +7,10 @@ public class PARAGRAPH extends Node {
     String paragraph;
     String start ="<p>";
     String end ="</p>";
+    String cssStart = ".class";
+    String cssMiddle = " {\n" +
+            "grid-area: ";
+    String cssEnd = ";\n}";
 
     @Override
     public void parse() {
