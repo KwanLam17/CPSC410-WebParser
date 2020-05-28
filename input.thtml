@@ -1,47 +1,44 @@
 Grid:
-[ One | Two | Three ]
-[ Four | Five | Six ]
-[ Seven | Eight | Nine ]
+[ header | place2 | j-gu ]
+[ left | content-1 | right ]
+[ footer | content-2 | place1 ]
 
-Placement: Four
+Placement: content-1
 List:
 [First LI | Second LI | Third LI]
 
-
-
-
-Placement: Three
-List:
-[First LI | Second LI]
-
-Placement: Eight
+Placement: place2
 Table:
 Title: SecondTable
-[Date | Time | Activity ]
-[Sept 1 | 9am | Get to school ]
+[Date | Time | "%%%%" ]
+[Sept 1 | 9 | Get to school ]
 [Sept 1 | 11am | Have lunch ]
 
-Placement: Six
+Placement: left
 Image:
 https://p7.hiclipart.com/preview/403/431/726/5bbc3da3545a3.jpg
 
-Placement: One
+Placement: header
 Navbar:
 [Our Project,https://github.com/KwanLam17/CPSC410-WebParser|Course Page,https://canvas.ubc.ca/]
 
-Placement: Five
+Placement: j-gu
+List:
+[First LI | Second LI]
+
+Placement: right
 Table:
 Title: FirstTable
 [Date | Time | Activity ]
 [Sept 1 | 9am | Get to school ]
 [Sept 1 | 11am | Have lunch ]
 
-Placement: Nine
+Placement: footer
 Table:
 Title: ThirdTable
 [Date | Time | Activity ]
 [Sept 1 | 9am | Get to school ]
 [Sept 1 | 11am | Have lunch ]
 
-Placement: Seven
-Paragraph: Hello my friend this is the best paragraph in the world!!
+Placement: content-2
+Paragraph: Hello-my$friend-this-is-the-best-paragraph-in-the-world!!
